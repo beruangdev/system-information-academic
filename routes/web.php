@@ -43,9 +43,9 @@ Route::get('/pull', function () {
     // $output = $result->output();
     // return response()->json($output);
     
-    $d = shell_exec('git fetch');
-    $output = shell_exec('git pull');
-    return response()->json($output);
+    $fetch = shell_exec('git fetch origin main');
+    $pull = shell_exec('git pull origin main');
+    return response()->json(compact('fetch', 'pull'));
 });
 
 Route::group(["middleware" => ['cache.data']], function () {
