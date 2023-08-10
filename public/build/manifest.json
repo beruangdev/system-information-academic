@@ -9,6 +9,9 @@
       "__commonjsHelpers-725317a4.js"
     ]
   },
+  "_cookie-b23bf575.js": {
+    "file": "assets/cookie-b23bf575.js"
+  },
   "_fetch-b8ff0b47.js": {
     "file": "assets/fetch-b8ff0b47.js"
   },
@@ -43,7 +46,7 @@
     "src": "resources/js/alpine/layout/app.js"
   },
   "resources/js/alpine/pages/dashboard/classroom/index.js": {
-    "file": "assets/index-72cf2c8c.js",
+    "file": "assets/index-af59ee36.js",
     "imports": [
       "_fetch-b8ff0b47.js",
       "_choices-b42e1b7a.js",
@@ -103,7 +106,7 @@
     "src": "resources/js/alpine/pages/dashboard/season/index.js"
   },
   "resources/js/alpine/pages/dashboard/student-attendance/index.js": {
-    "file": "assets/index-62032f83.js",
+    "file": "assets/index-639f7bfb.js",
     "imports": [
       "_fetch-b8ff0b47.js",
       "_selectStudents-68a567db.js",
@@ -114,28 +117,30 @@
     "src": "resources/js/alpine/pages/dashboard/student-attendance/index.js"
   },
   "resources/js/alpine/pages/dashboard/student-grade/index.js": {
-    "file": "assets/index-da963b4a.js",
+    "file": "assets/index-724a2ee5.js",
     "imports": [
       "_choices-b42e1b7a.js",
       "_selectStudents-68a567db.js",
       "_selectSeasons-873b5e3f.js",
       "_selectCourses-8a0dc8fa.js",
       "_fetch-b8ff0b47.js",
+      "_cookie-b23bf575.js",
       "__commonjsHelpers-725317a4.js"
     ],
     "isEntry": true,
     "src": "resources/js/alpine/pages/dashboard/student-grade/index.js"
   },
   "resources/js/alpine/pages/dashboard/student/index.js": {
-    "file": "assets/index-7591f9c1.js",
+    "file": "assets/index-ba5b3d92.js",
     "imports": [
-      "_fetch-b8ff0b47.js"
+      "_fetch-b8ff0b47.js",
+      "_cookie-b23bf575.js"
     ],
     "isEntry": true,
     "src": "resources/js/alpine/pages/dashboard/student/index.js"
   },
   "resources/js/alpine/pages/dashboard/tuition-payment/index.js": {
-    "file": "assets/index-51e81d89.js",
+    "file": "assets/index-2aa1a949.js",
     "imports": [
       "_fetch-b8ff0b47.js",
       "_choices-b42e1b7a.js",
@@ -147,12 +152,15 @@
     "src": "resources/js/alpine/pages/dashboard/tuition-payment/index.js"
   },
   "resources/js/script.js": {
-    "file": "assets/script-b95a725f.js",
+    "file": "assets/script-448a3995.js",
+    "imports": [
+      "_cookie-b23bf575.js"
+    ],
     "isEntry": true,
     "src": "resources/js/script.js"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-b40a1ccc.css",
+    "file": "assets/style-c51b6fc2.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }
