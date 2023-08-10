@@ -9,14 +9,17 @@ const { result } = concurrently(
         },
     ],
     {
-        // prefix: "push",
         restartTries: 1,
-        // cwd: resolve(),
     },
 );
 
 function success() {
     console.log("success");
+    fetch("https://sia.resamja.com/pull").then(res => res.json()).then(json => {
+        console.log(json);
+    }).catch(error => {
+        console.error("Terjadi error: ", error);
+    })
 }
 function failure() {
     console.log("failure");
