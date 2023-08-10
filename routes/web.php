@@ -16,6 +16,7 @@ use App\Http\Controllers\StudentGradeController;
 use App\Http\Controllers\TuitionPaymentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,8 +30,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/pull', function () {
+    // $result = Process::run('git fetch');
+    // $result = Process::run('git pull');
+    // $result = Process::run('ls');
+    // $result = Process::path(__DIR__)->run('ls');
+
+    // $result = Process::run('git -v', function (string $type, string $output) {
+    //     echo $output;
+    // });
+
+    // $output = $result->output();
+    // return response()->json($output);
+    
+    $d = shell_exec('git fetch');
+    $output = shell_exec('git pull');
+    return response()->json($output);
+});
+
 Route::group(["middleware" => ['cache.data']], function () {
-  
+
 
     Route::middleware([
         'auth:sanctum',
