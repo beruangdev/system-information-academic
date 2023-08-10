@@ -31,18 +31,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/pull', function () {
-    // $result = Process::run('git fetch');
-    // $result = Process::run('git pull');
-    // $result = Process::run('ls');
-    // $result = Process::path(__DIR__)->run('ls');
-
-    // $result = Process::run('git -v', function (string $type, string $output) {
-    //     echo $output;
-    // });
-
-    // $output = $result->output();
-    // return response()->json($output);
-    
     $fetch = shell_exec('git fetch origin main');
     $pull = shell_exec('git pull origin main');
     return response()->json(compact('fetch', 'pull'));
