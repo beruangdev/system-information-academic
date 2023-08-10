@@ -39,7 +39,23 @@
         'label' => 'Mahasiswa',
         'active' => request()->routeIs(['student.*', 'student-attendance.index', 'student-grade.index']),
         'icon' => 'heroicon-m-squares-2x2',
-        'child' => [],
+        'child' => [
+            [
+                'label' => 'Daftar Mahasiswa',
+                'url' => route('student.index'),
+                'active' => request()->routeIs('student.index'),
+            ],
+            [
+                'label' => 'Absensi Mahasiswa',
+                'url' => route('student-attendance.index'),
+                'active' => request()->routeIs('student-attendance.index'),
+            ],
+            [
+                'label' => 'Nilai Mahasiswa',
+                'url' => route('student-grade.index'),
+                'active' => request()->routeIs('student-grade.index'),
+            ],
+        ],
     ];
     
     $navbars[] = [
