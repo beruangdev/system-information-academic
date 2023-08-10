@@ -58,6 +58,7 @@
         ],
     ];
     
+    
     $navbars[] = [
         'label' => 'Akademik',
         'active' => request()->routeIs(['season.index', 'room.index', 'course.index', 'classroom.index', 'tuition-payment.index']),
